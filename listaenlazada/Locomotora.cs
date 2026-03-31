@@ -8,7 +8,24 @@ namespace listaenlazada
 {
     internal class Locomotora
     {
-        public Vagon Primero {  get; set; }
+        private Vagon Primero {  get; set; }
+
+        public void AgregarIni(int valor)
+        {
+            //agregar un dato al inicio
+            Vagon nuevo = new Vagon(valor);
+            if (this.Primero== null) {
+                this.Primero = nuevo;
+
+
+            }
+            else
+            {
+                Vagon prim = this.Primero;
+                nuevo.Sig = prim;
+                this.Primero = nuevo; 
+            }
+        }
 
         public void Imprime()
         {
