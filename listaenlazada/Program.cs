@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using listaenlazada;
-
+/*
 Locomotora a = new Locomotora();
 Vagon v1 = new Vagon(1);
 Vagon v2 = new Vagon(2);
@@ -14,5 +14,13 @@ v1 = a.Primero;
 v3.Sig = v1;
 a.Primero = v3;
 a.Imprime();
+*/
+Console.WriteLine();
+Locomotora b = new Locomotora();
+b.AgregarIni(5);
+b.AgregarIni(3);
+b.AgregarIni(10);
+b.Inbsertarfinal(1);
+b.Imprime();
 
 
