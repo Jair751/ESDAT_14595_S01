@@ -64,8 +64,43 @@ namespace listaenlazada
             }
         }
 
+        public void Eliminar()
+        {
+            
 
+            if (this.Primero != null || this.Primero.Sig != null)
+            {
+                Vagon segundo = this.Primero.Sig;
+                Vagon tercero = segundo.Sig;
+                this.Primero.Sig = tercero;
+                segundo.Sig = null;
+
+            }
+
+        }
+        public bool BuscarValor(int valorbuscado)
+        {
+            Vagon tmp = Primero;
+            while (tmp != null)
+            {
+                if (tmp.Dato == valorbuscado)
+                {
+                    return true;
+                    Console.WriteLine($"{tmp.Dato}, ");
+                    
+                }
+                tmp = tmp.Sig;
+
+
+            }
+            return false;
+        }
+
+
+            
+
+        }
 
 
     }
-}
+

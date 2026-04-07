@@ -19,8 +19,12 @@ Console.WriteLine();
 Locomotora b = new Locomotora();
 b.AgregarIni(5);
 b.AgregarIni(3);
-b.AgregarIni(10);
-b.Inbsertarfinal(1);
+b.AgregarIni(1);
+b.Inbsertarfinal(7);
+b.Eliminar();
 b.Imprime();
+Console.WriteLine("Ingresar valor a buscar");
+int vbus = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(b.BuscarValor(vbus) ? "Encontrado" : "no esta");
 
 
